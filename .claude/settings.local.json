@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "PowerShell(npm install -g uipro-cli 2>&1)",
+      "Read(//c/Users/fahad/**)",
+      "PowerShell(@\\(\"C:\\\\Users\\\\fahad\\\\Desktop\", \"C:\\\\Users\\\\fahad\\\\OneDrive\\\\Desktop\", \"C:\\\\Users\\\\fahad\\\\Documents\", \"C:\\\\Users\\\\fahad\\\\OneDrive\\\\Documents\", \"C:\\\\Users\\\\fahad\\\\Downloads\", \"C:\\\\Users\\\\fahad\\\\projects\", \"C:\\\\dev\", \"C:\\\\projects\"\\) | ForEach-Object { if \\(Test-Path $_\\) { Get-ChildItem -Path $_ -Recurse -Filter \"site-header.tsx\" -ErrorAction SilentlyContinue -Depth 6 | Select-Object FullName } })",
+      "Bash(.venv/Scripts/python.exe predict.py \"BREAKING: Scientists discover new exoplanet with water vapor in atmosphere using James Webb Space Telescope data\")",
+      "PowerShell($ports = 3000, 3001, 3005, 3030, 5173, 8080; foreach \\($p in $ports\\) { $busy = Get-NetTCPConnection -LocalPort $p -State Listen -ErrorAction SilentlyContinue; if \\($busy\\) { \"PORT ${p}: BUSY \\(pid $\\($busy[0].OwningProcess\\)\\)\" } else { \"PORT ${p}: free\" } })",
+      "PowerShell(Start-Process -FilePath \"backend-ml\\\\.venv\\\\Scripts\\\\python.exe\" -ArgumentList \"-m\",\"uvicorn\",\"api:app\",\"--host\",\"127.0.0.1\",\"--port\",\"8000\" -WorkingDirectory \"$pwd\\\\backend-ml\" -WindowStyle Hidden -PassThru | Select-Object Id, ProcessName)",
+      "Bash(./.venv/Scripts/python.exe -m uvicorn api:app --host 127.0.0.1 --port 8000)",
+      "Bash(npx next *)"
+    ]
+  }
+}

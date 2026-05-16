@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: fake-news-detector-ml
+    runtime: docker
+    rootDir: backend-ml
+    dockerfilePath: ./Dockerfile
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: 8000
+      - key: ALLOWED_ORIGINS
+        sync: false
